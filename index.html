@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin-top: 48px;
+        display: flex;
+        justify-content: center;
+    }
+    h1 {
+        text-align: center;
+    }
+    form {
+        width: 500px;
+    }
+
+    legend {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .form-row {
+        display: flex;
+
+        gap: 1rem;
+        width: 100%;
+    }
+    .form-column {
+        display: flex;
+        flex-direction: column;
+    }
+    label {
+        display: block;
+        font-weight: bold;
+    }
+    label, input, select {
+        font-size: 1rem;
+        width: 100%;
+        margin: 0;
+    }
+
+    input[type="submit"] {
+        background-color: green;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: darkgreen;
+    }
+    input[type="submit"]:active {
+        background-color: darkgreen;
+    }
+    input[type="submit"]:focus {
+        outline: none;
+    }
+</style>
+<body>
+    <div>
+        <h1>Personal form</h1>
+        <form action="" method="post">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <div class="form-row">
+                    <div class="form-column">
+                        <label for="data[1][fname]">First Name</label>
+                        <input type="text" name="data[1][fname]" id="fname" required>
+                    </div>
+                    <div class="form-column">
+                        <label for="data[1][lname]">Last Name</label>
+                        <input type="text" name="data[1][lname]" id="lname" required>
+                    </div>
+                </div>
+                <div class="form-column">
+                    <label for="data[1][email]">Email</label>
+                    <input type="email" name="data[1][email]" id="email" required>
+    
+                    <label for="data[1][age]">Age</label>
+                    <input type="number" name="data[1][age]" id="age" required>
+                
+                    <label for="data[1][sex]">Sex</label>
+                    <select name="data[1][sex]" id="sex">
+                        <option value="male">male</option>
+                        <option value="female">female</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Courses</legend>
+                <div class="form-row">
+                    <input type="checkbox" name="data[2]zwa[]" value="ZWA">
+                    <label for="data[2]zwa[]">ZWA</label>
+                </div>
+                <div class="form-row">
+                    <input type="checkbox" name="data[2]math[]" value="Math">
+                    <label for="data[2]math[]">Math</label>
+                </div>
+                <div class="form-row">
+                    <input type="checkbox" name="data[2]alg[]" value="Algorithmization">
+                    <label for="data[2]alg[]">Algorithmization</label>
+                </div>
+            </fieldset>
+            <div class="form-row">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
